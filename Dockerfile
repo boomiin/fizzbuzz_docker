@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
 RUN apt update
-RUN apt install nodejs
-RUN apt install npm
+RUN apt -y install nodejs
+RUN apt -y install npm
+RUN rm -rf /var/lib/apt/lists/*
 
-EXPOSE 12
 CMD node fizzbuzz.js
